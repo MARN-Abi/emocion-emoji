@@ -1,0 +1,65 @@
+<html>
+<head>
+<title> Emoción emoji </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+      <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+      <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container"> 
+   <center> 
+    <h3 class="btn btn-warning heading"> Aplicacion emocion a emoji  
+        <br>
+        <span>&#128522;</span>
+        <span>&#128512;</span>
+        <span>&#128532;</span>
+        <span>&#128546;</span>
+        <span>&#128545;</span>
+        <span>&#128548;</span>
+     
+    </h3>
+    <br>
+    <br>
+    <p> Toma tu foto para generar un emoji
+        <br>
+     <b style="color: gold;">¿Estás feliz?</b>
+     <br>
+     <b style="color: blue;">¿Estás triste?</b> 
+     <br>  
+     <b style="color: brown;">¿Estás enojado?</b>
+    </p>
+
+
+    <div class="col-md-4 col-sm-12 col-xs-12"> 
+    <label>Vista de la camara web</label>
+    <div id="camera"></div>
+    <br>
+    <br>
+    <button onclick="take_snapshot()" class="btn btn-warning" > Capturar imagen </button>
+    </div>
+    
+    <div class="col-md-4 col-sm-12 col-xs-12">
+        <label> Prediccion 1 </label>
+        <p class="emotion_name" id="result_emotion_name"> </p>
+        <p class="emoji" id="update_emoji"></p>
+
+        <label> Prediccion 2 </label>
+        <p class="emotion_name" id="result_emotion_name2"> </p>
+        <p class="emoji" id="update_emoji2"></p>
+    </div>
+    <div class="col-md-4 col-sm-12 col-xs-12" >
+    <label> Instantanea </label>
+    <div id="result"></div>
+    <br>
+    <br>
+    <button class="btn btn-success" onclick="check()"> Predecir emoción </button>
+    </div>
+   </center>
+</div>
+<script src="main.js"> </script>    
+</body>    
+</html>
